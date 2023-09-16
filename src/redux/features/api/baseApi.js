@@ -8,5 +8,7 @@ const baseApi = createApi({
         }),
     })
 });
- export const {getPosts}=baseApi
+//  useGetPostsQuery return an obejct  
+export const {getPosts,useGetPostsQuery}=baseApi
+
 export default baseApi;
