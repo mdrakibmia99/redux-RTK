@@ -19,6 +19,6 @@ const baseApi = createApi({
     })
 });
 //  useGetPostsQuery return an obejct  
-export const { useGetPostsQuery, useGetSpecificPostQuery } = baseApi
+export const { useGetPostsQuery, useGetSpecificPostQuery ,useSetPostMutation} = baseApi
 
 export default baseApi;
