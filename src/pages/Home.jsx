@@ -3,7 +3,13 @@ import { useGetPostsQuery } from "../redux/features/api/baseApi"
 
 function Home() {
   // useGetPostsQuery return a object
-  const { isError, isLoading, data: posts, error } = useGetPostsQuery()
+  const { isError, isLoading, data: posts } = useGetPostsQuery();
+  if(isLoading){
+    return <p className="text-center text-9xl">Loading</p>
+  }
+  if(!isLoading && isError){
+    return <p className="text-center text-9xl">Something is wrong</p>
+  }
   return (
     <div className="container mx-auto">
       <h1>Home page</h1>
