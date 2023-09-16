@@ -7,6 +7,7 @@ function Home() {
   // useGetPostsQuery return a object
   // const { isError, isLoading, data: posts } = useGetPostsQuery();
   const { isError, isLoading, data: post } = useGetSpecificPostQuery(1);
+  const [setPost,{}]=use
   const onSubmit = (data) => console.log(data)
 
   if(isLoading){
